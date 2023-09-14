@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "Редактирование";
+}
+@model ClientModel
+
+
+<form asp-action="edit" asp-controller="home" asp-route-id="@Model.Id">
+    <h2>Редактирование клиента:</h2>
+    <p>
+        <label asp-for="Inn">Инн:</label><br />
+        <input type="number" asp-for="Inn" />
+    </p>
+    <p>
+        <label asp-for="Name">Наименование</label><br />
+        <input type="text" asp-for="Name" />
+    </p>
+    <div class="radio-container">
+        <span>ЮЛ</span> <br />
+        <input name="Type" type="radio" value="0" />
+    </div>
+    <div class="radio-container">
+        <span>ИП</span> <br />
+        <input name="Type" type="radio" value="1" />
+    </div>
+    <p>
+        <input type="submit" value="Сохранить" />
+    </p>
+</form>
+
+<style>
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f7f7f7;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input[type="number"],
+    input[type="text"],
+    input[type="radio"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+    .radio-container {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+</style>

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Тестовое задание | @ViewBag.Title</title>
+
+    <style>
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        .menu {
+            text-align: center;
+            display: inline-block;
+        }
+        .menu a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 20px;
+        }
+        .menu .main-link {
+            font-weight: bold;
+        }
+        .link :hover {
+            color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <div class="link"><a href="/Home/Index">Главная</a></div>
+        </nav>
+    </header>
+    
+    <div>
+        @RenderBody()
+    </div>
+ 
+</body>
+</html>
